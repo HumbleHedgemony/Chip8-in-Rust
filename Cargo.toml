@@ -1,0 +1,19 @@
+[package]
+name = "chip8"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+
+[dependencies]
+rand = "*"
+more-asserts = "0.3.1"
+
+[llvm]
+targets = "WebAssembly"
+
+
+[build]
+build-stage = 1
+target = ["wasm32-unknown-emscripten"]
